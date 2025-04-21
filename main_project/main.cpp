@@ -6,4 +6,4 @@ int main() {
 		cout << st1.getMark(i) << " ";
 		}
 	return 0;
-}
+}  
