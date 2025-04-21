@@ -1,15 +1,9 @@
 #include "Teacher.h"
-
 int main() {
-	Student student1{};
-	Student student2("Alex", 14);
-	Student student3("Vlad", 13, 9, true);
-	Student student4(student3);
+	Student st1("Vlad", 13, 10, true);
 
-
-	cout << student1.toString() << endl;
-	cout << student2.toString() << endl;
-	cout << student3.toString() << endl;
-	cout << student4.toString() << endl;
+	for (int i = 0; i < st1.countMark; i++) {
+		cout << st1.getMark(i) << " ";
+		}
 	return 0;
 }
