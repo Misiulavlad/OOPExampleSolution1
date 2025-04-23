@@ -8,9 +8,10 @@ int main() {
 
 	Initializer initializer;
 	initializer.init(list, count);
-
+	int c = 1;
 	for (int i = 0; i < count; i++) {
-		cout << list[i].toString() << endl;
+		cout <<c<<"  "<< list[i].toString() << endl;
+		c++;
 	}
 	return 0;
 }  
