@@ -7,14 +7,7 @@ public:
 	int countMark;
 	bool alive;
 
-	Student() {
-		cout << "Default-constructor..." << endl;
-		name = "nn";
-		age = 13;
-		marks = nullptr;
-		countMark = 0;
-		alive = true;
-
+	Student() :Student("nn", 13, 10, true) {
 	}
 
 	// constructor with arguments
@@ -25,7 +18,7 @@ public:
 	}
 
 	Student(string name, int age, int countMark, bool alive) {
-		cout << "canonical constructor with arguments..." << endl;
+		//cout << "canonical constructor with arguments..." << endl;
 		this->name = name;
 		this->age = age;
 		this->alive = alive;
@@ -66,7 +59,6 @@ public:
 		}
 	}
 
-
 	int getMark(int index) {
 		return index < 0 || index > countMark || !marks ? 0 : marks[index];
 	}
@@ -76,5 +68,4 @@ public:
 			marks[index] = mark;
 		}
 	}
-
-}; 
+};
