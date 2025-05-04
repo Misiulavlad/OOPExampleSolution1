@@ -1,71 +1,36 @@
 #include "main.h"
+
 class Student {
-public:
+private:
 	string name;
 	int age;
-	int* marks;
 	int countMark;
+	int* marks;
 	bool alive;
 
-	Student() :Student("nn", 13, 10, true) {
-	}
+	string getAllMarks();
 
-	// constructor with arguments
-	Student(string nm, int a) :Student(name, a, 0, true) {
-		cout << "constructor with arguments..." << endl;
-
-
-	}
-
-	Student(string name, int age, int countMark, bool alive) {
-		//cout << "canonical constructor with arguments..." << endl;
-		this->name = name;
-		this->age = age;
-		this->alive = alive;
-		this->countMark = countMark;
-		marks = new int[countMark];
-		for (int i = 0; i < countMark; i++) {
-			marks[i] = 4;
-		}
-	}
-
+public:
+	Student() : Student("no name", 13, 10, true) {}
+	Student(string name) : Student(name, 13, 0, true) {}
+	Student(string nm, int a) : Student(nm, a, 0, true) {}
+	Student(string name, int age, int countMark, bool alive);
 	Student(const Student& student) : Student(student.name, student.age,
 		student.countMark, student.alive) {
-		cout << "copy constructor..." << endl;
 	}
+	~Student();
 
-	~Student() {
-		//cout << "Destructor..." << endl;
-		if (marks != nullptr) {
-			delete[] marks;
-		}
-	}
+	string getName();
+	void setName(string name);
+	int getAge();
+	void setAge(int age);
+	int getCountMark();
+	int* getMarks();
+	bool isAlive();
+	void setAlive(bool alive);
+	int getMark(int index);
+	void setMark(int index, int mark);
+	double getAverageMark();
 
-	string toString() {
-		string s = "Name: " + name;
-		s += ", age: " + to_string(age);
-		s += ", mark: " + getAllMarks();
-		s += ", alive: ";
-		s += (alive ? "Yes" : "No");
-		return s;
-	}
-
-	string getAllMarks() {
-		string s = "";
-		for (int i = 0; i < countMark; i++) {
-			s += to_string(marks[i]) + " ";
-
-			return s;
-		}
-	}
-
-	int getMark(int index) {
-		return index < 0 || index > countMark || !marks ? 0 : marks[index];
-	}
-
-	void setMark(int index, int mark) {
-		if (index >= 0 && index < countMark && marks) {
-			marks[index] = mark;
-		}
-	}
+	string toString();
 };
