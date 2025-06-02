@@ -10,7 +10,7 @@ int main() {
 
 	truck trucks[size]{ truck(300),truck(400),truck(500) };
 
-	Plane planes[size]{ Plane(2000),Plane(3000),Plane(3860) };
+	Plane planes[size]{ Plane(2000),Plane(3000),Plane(2860) };
 
 	GasStation station;
 
