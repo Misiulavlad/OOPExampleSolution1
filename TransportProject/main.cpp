@@ -18,4 +18,4 @@ int main() {
 	cout << "Total: " << total<<endl;
 
 	return 0;
-}
+} 
