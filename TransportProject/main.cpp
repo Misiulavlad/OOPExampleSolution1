@@ -17,11 +17,6 @@ int main() {
 	Transport* transports[size]{ tr1, tr2, tr3, plane };
 
 
-	//Car cars[size]{ Car(40), Car(50), Car(45) };
-	//Bus buses[size]{ Bus(255), Bus(250), Bus(300) };
-	//Truck trucks[size]{Truck(300), Truck(400) , Truck(500) };
-	//Plane planes[size]{Plane(2000), Plane(3000) , Plane(2860) };
-
 	GasStation station;
 
 	int total = station.calculateTotalGas(transports, size);
