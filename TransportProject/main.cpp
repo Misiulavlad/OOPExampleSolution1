@@ -29,4 +29,4 @@ int main() {
 	cout << "Total gas is " << total << endl;
 
 	return 0;
-}
+} 
